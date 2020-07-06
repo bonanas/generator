@@ -39,16 +39,19 @@
     NatureAdj = new Array("Raging","Cold","Tall","Warm","Ancient");
     
    
-    document.getElementById("result").innerHTML=getTribe(prefixes[Math.floor(Math.random()*prefixes.length)], 
-                                                         suffixes[Math.floor(Math.random()*suffixes.length)]) + 
+    document.getElementById("result").innerHTML=getTribe(AniNoun[Math.floor(Math.random()*AniNoun.length)], 
+                                                         AniAdj[Math.floor(Math.random()*AniAdj.length)],
+                                                         Prep[Math.floor(Math.random()*Prep.length)],
+                                                         NatureNoun[Math.floor(Math.random()*NatureNoun.length)],
+                                                         NatureAdj[Math.floor(Math.random()*NatureAdj.length)]) + 
         " - a " + fur[Math.floor(Math.random()*fur.length)] + " " + baseColor[Math.floor(Math.random()*baseColor.length)] + " " + pattern[Math.floor(Math.random()*pattern.length)] + whiteSpots[Math.floor(Math.random()*whiteSpots.length)] + ". They have " + eyes[Math.floor(Math.random()*eyes.length)] + ". They " + traits1[Math.floor(Math.random()*traits1.length)] + " and " + traits1[Math.floor(Math.random()*traits1.length)] + ". ";
     }
             
-    function getTribe(prefix, suffix){
-        format = new Array(prefix + " of many " +suffix, 
-                           prefix + suffix,
-                           prefix + " who loves to " +suffix,
-                           prefix + " that would take a bullet for " +suffix);
+    function getTribe(aniNoun, aniAdj, prep, natureNoun, natureAdj){
+        format = new Array(aniAdj + " " + aniNoun + " who climbs " + prep + " " natureNoun,
+                          aniAdj + " who lives " + prep + " " + natureNoun,
+                          natureAdj + " " + natureNoun + " " + prep + " " + NatureNoun[Math.floor(Math.random()*NatureNoun.length)],
+                          "Bo is a dipshit");
         
     strRandomizer= format[Math.floor(Math.random()*format.length)];
         
@@ -64,7 +67,7 @@
     </tr>
     <tr>
         <td><div class="FILLER" style="width: 100px;height:100px"></div></td>
-        <td><div class="title" style="font-family: Tahoma;font-size:12pt;left:200px;width: 500px;"><h1>Tribe Name Generator 6:04</h1><br />
+        <td><div class="title" style="font-family: Tahoma;font-size:12pt;left:200px;width: 500px;"><h1>Tribe Name Generator 6:08</h1><br />
 An incredibly jank Tribe Cat Generator. Huge Work in Progress.</div>
     <br /> <br /> 
     <button onclick="getCat()">New Cat!</button> <br /> <br /> <br />
