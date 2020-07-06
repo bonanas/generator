@@ -32,15 +32,15 @@
 
     AniAdj = new Array("", "", "", "", "", "", "", "", "Quick", "Soft", "Tiny", "Slow", "Angry", "Protective", "Sorrowful", "Shy", );
     
-    Color = new Array("Amber", "Black", "Blue"
+    Color = new Array("Amber", "Black", "Blue");
 
     Prep = new Array("on","in","at","under","over","behind","below","above", "within","by","along");
 
     Location = new Array("Tree", "Riverbed", "Cave", "Ground", "Mountain", "Cloud", "Storm", "Blizzard", "Sky", "Grass", "Field", "Meadow", "Hill");
       
-    NatureNoun = new Array ("Acorn", "Tree", "Apple", "Ash", "Bark", "Berry", "Bloom", "Blossom", "Bluebell", "Boulder", "Footstep", "Paw", ");
+    NatureNoun = new Array ("Acorn", "Tree", "Apple", "Ash", "Bark", "Berry", "Bloom", "Blossom", "Bluebell", "Boulder", "Footstep", "Paw");
 
-    NatureAdj = new Array("Raging","Cold","Tall","Warm","Ancient");
+    NatureAdj = new Array("Raging","Cold","Tall","Warm","Ancient", "", "", "", "", "", "");
       
     ActionVerb = new Array("Bounce", "Call", "Run", "Cry", "Skip");
     
@@ -53,6 +53,7 @@
     function getTribe(){
        format = new Array((AniAdj[Math.floor(Math.random()*AniAdj.length)]) + " " +(AniNoun[Math.floor(Math.random()*AniNoun.length)]) + " who " + (ActionVerbPlural[Math.floor(Math.random()*ActionVerbPlural.length)]) + " " + (Prep[Math.floor(Math.random()*Prep.length)]) + " " + (Location[Math.floor(Math.random()*Location.length)]),
                           (NatureAdj[Math.floor(Math.random()*NatureAdj.length)]) + " " +(NatureNoun[Math.floor(Math.random()*NatureNoun.length)]) + " " + (Prep[Math.floor(Math.random()*Prep.length)]) + " " + (Location[Math.floor(Math.random()*Location.length)]),
+                          (ActionVerb[Math.floor(Math.random()*AniAdj.length)]) + " of " +(AniAdj[Math.floor(Math.random()*AniAdj.length)]) + " " +(AniNoun[Math.floor(Math.random()*AniNoun.length)])
                          );
         
     strRandomizer= format[Math.floor(Math.random()*format.length)];
@@ -69,7 +70,7 @@
     </tr>
     <tr>
         <td><div class="FILLER" style="width: 100px;height:100px"></div></td>
-        <td><div class="title" style="font-family: Tahoma;font-size:12pt;left:200px;width: 500px;"><h1>Tribe Name Generator as of 7:13 </h1><br />
+        <td><div class="title" style="font-family: Tahoma;font-size:12pt;left:200px;width: 500px;"><h1>Tribe Name Generator as of 7:16 </h1><br />
 An incredibly jank Tribe Cat Generator. Huge Work in Progress.</div>
     <br /> <br /> 
     <button onclick="getCat()">New Cat!</button> <br /> <br /> <br />
