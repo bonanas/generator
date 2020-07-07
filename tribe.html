@@ -39,17 +39,21 @@
 
     Prep = new Array("on","in","at","under","over","behind","below","above", "within","by","along", "atop");
 
-    Location = new Array("Tree", "Riverbed", "Cave", "Ground", "Mountain", "Cloud", "Storm", "Blizzard", "Sky", "Grass", "Field", "Meadow", "Hill");
+    Location = new Array("Tree", "Riverbed", "Cave", "Ground", "Mountain", "Cloud", "Storm", "Blizzard", "Sky", "Grass", "Field", "Meadow", "Hill", "Branch", "Rock", "Boulder", "Swamp", "Bog", "Puddle", "Stream", "River", "Ocean", "Pond", "Creek");
       
-    NatureNoun = new Array ("Acorn", "Tree", "Apple", "Ash", "Bark", "Berry", "Bloom", "Blossom", "Bluebell", "Boulder", "Footstep", "Paw", "Bracken", "Bramble", "Path");
+    NatureNoun = new Array ("Acorn", "Tree", "Ash", "Bark", "Berry", "Bloom", "Blossom", "Bluebell", "Boulder", "Footstep", "Paw", "Bracken", "Bramble", "Path", "Branch", "Breeze", "Bubble",);
 
-    NatureAdj = new Array("Raging","Cold","Tall","Warm","Ancient", "Gentle", "Winding", "Narrow", "Short", "Tiny", "Giant", "Heavy", "", "", "", "", "", "");
+    NatureAdj = new Array("Raging","Cold","Tall","Warm","Ancient", "Gentle", "Winding", "Narrow", "Short", "Tiny", "Giant", "Heavy", "Hot", "Freezing", "Frozen", "Ragged", "Old", "New", "Dark", "", "", "", "", "", "");
       
-    VerbNounAni = new Array("Bounce", "Call", "Run", "Cry", "Skip", "Song", "Shadow", "Tooth", "Fur", "Feather", "Chirp", "Silence", "Sprint", "Spirit", "Belly", "Paw", "Fall", "Path");
+    VerbNounAni = new Array("Bounce", "Call", "Run", "Cry", "Skip", "Song", "Shadow", "Tooth", "Fur", "Feather", "Chirp", "Silence", "Sprint", "Spirit", "Belly", "Paw", "Fall", "Path", "Sight");
     
-    NatVerbNoun = new Array("Stars", "Sun", "Moon", "Wind", "Cold", "Storm", "Whistle", "Blaze");
+    NatVerbNoun = new Array("Stars", "Sun", "Moon", "Wind", "Cold", "Storm", "Whistle", "Blaze", "Breeze");
     
-    ActionVerbPlural = new Array ("Cries", "Runs", "Walks", "Sleeps", "Stalks", "Hunts", "Skips", "Calls", "Sings", "Crawls", "Rushes", "Sprints", "Stumbles");
+    ActionVerbPlural = new Array ("Cries", "Runs", "Walks", "Sleeps", "Stalks", "Hunts", "Skips", "Calls", "Sings", "Crawls", "Rushes", "Sprints", "Stumbles", "Watches");
+      
+    Number = new Array("Many", "Few", "No", "One");
+      
+    Waters = new Array("River", "Lake", "Stream", "Ocean", "Puddle");
    
     document.getElementById("result").innerHTML=getTribe() + 
         " - a " + fur[Math.floor(Math.random()*fur.length)] + " " + baseColor[Math.floor(Math.random()*baseColor.length)] + " " + pattern[Math.floor(Math.random()*pattern.length)] + whiteSpots[Math.floor(Math.random()*whiteSpots.length)] + ". They have " + eyes[Math.floor(Math.random()*eyes.length)] + ". They " + traits1[Math.floor(Math.random()*traits1.length)] + " and " + traits1[Math.floor(Math.random()*traits1.length)] + ". ";
@@ -65,8 +69,10 @@
                           (getItem(AniAdj)) + " " + (getItem(AniNoun)) + " who " + (getItem(ActionVerbPlural)) + " at " + (getItem(Time)),
                           (getItem(VerbNounAni)) + " of " +(getItem(AniAdj)) + " " +(getItem(AniNoun)),
                           (getItem(NatVerbNoun)) + " of " +(getItem(NatureAdj)) + " " +(getItem(Time)),
-                          (getItem(NatureAdj)) + " " + (getItem(NatureNoun)) + " where " + (getItem(AniNoun)) + (getItem(ActionVerbPlural)),
-                          (getItem(NatureAdj)) + " " + (getItem(Time)) + " where " + (getItem(AniNoun)) + (getItem(ActionVerbPlural))
+                          (getItem(NatureAdj)) + " " + (getItem(NatureNoun)) + " where " + (getItem(AniNoun)) + " " + (getItem(ActionVerbPlural)),
+                          (getItem(NatureAdj)) + " " + (getItem(Location)) + " where " + (getItem(AniNoun)) + " " + (getItem(ActionVerbPlural)),
+                          (getItem(NatureAdj)) + " " + (getItem(Time)) + " where " + (getItem(AniNoun)) + " " + (getItem(ActionVerbPlural)),
+                          (getItem(Location)) + " of " + (getItem(Number)) + " " (getItem(NatureAdj)) + " " + (getItem(NatureNoun)) +"(s)"
                          );
         
     strRandomizer= format[Math.floor(Math.random()*format.length)];
@@ -83,7 +89,7 @@
     </tr>
     <tr>
         <td><div class="FILLER" style="width: 100px;height:100px"></div></td>
-        <td><div class="title" style="font-family: Tahoma;font-size:12pt;left:200px;width: 500px;"><h1>Tribe Name Generator as of 10:25 07/06/2020 </h1><br />
+        <td><div class="title" style="font-family: Tahoma;font-size:12pt;left:200px;width: 500px;"><h1>Tribe Name Generator as of 10:40 07/06/2020 </h1><br />
 An incredibly jank Tribe Cat Generator. Huge Work in Progress.</div>
     <br /> <br /> 
     <button onclick="getCat()">New Cat!</button> <br /> <br /> <br />
