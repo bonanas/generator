@@ -52,9 +52,11 @@
     
     NatVerbNoun = new Array("Stars", "Sun", "Moon", "Wind", "Cold", "Storm", "Whistle", "Blaze", "Breeze", "Drizzle", "Flash");
     
-    ActionVerbPlural = new Array ("Cries", "Crouches", "Runs", "Fidgets", "Flails", "Flashes", "Walks", "Sleeps", "Stalks", "Hunts", "Skips", "Calls", "Sings", "Crawls", "Rushes", "Sprints", "Stumbles", "Watches", "Waits", "Flies");
+    ActionVerbPlural = new Array ("Hides", "Cries", "Crouches", "Runs", "Fidgets", "Flails", "Flashes", "Walks", "Sleeps", "Stalks", "Hunts", "Skips", "Calls", "Sings", "Crawls", "Rushes", "Sprints", "Stumbles", "Watches", "Waits", "Flies");
       
     Number = new Array("Many", "Few", "No", "One");
+      
+    AniIngVerb = new Array("Hiding", "Crouching", "Running", "Walking", "Sleeping", "Stalking", "Jumping", "Sleeping", "Hunting", "Skipping", "Calling", "Singing", "Crawling", "Rushing", "Sprinting", "Sneaking", "Watching", "Waiting", "Flying");
    
     document.getElementById("result").innerHTML=getTribe() + 
         " - a " + fur[Math.floor(Math.random()*fur.length)] + " " + baseColor[Math.floor(Math.random()*baseColor.length)] + " " + pattern[Math.floor(Math.random()*pattern.length)] + whiteSpots[Math.floor(Math.random()*whiteSpots.length)] + ". They have " + eyes[Math.floor(Math.random()*eyes.length)] + ". They " + traits1[Math.floor(Math.random()*traits1.length)] + " and " + traits1[Math.floor(Math.random()*traits1.length)] + ". ";
@@ -77,7 +79,9 @@
                           // Raging Dawn where Mouse Jumps
                           (getItem(TimeAdj)) + " " + (getItem(Time)) + " "+ (getItem(["where", "when"]))+ " " + (getItem(AniNoun)) + " " + (getItem(ActionVerbPlural)),
                           // Boulder of Many Tall Tree(s)
-                          (getItem(Location)) + " of " + (getItem(Number)) + " " + (getItem(NatureAdj)) + " " + (getItem(NatureNoun)) +"(s)"
+                          (getItem(Location)) + " of " + (getItem(Number)) + " " + (getItem(NatureAdj)) + " " + (getItem(NatureNoun)) +"(s)",
+                          // Quiet Mouse Jumping over Boulder
+                          (getItem(AniAdj)) + " " +(getItem(AniNoun)) + " " + (getItem(AniIngVerb)) + " " + (getItem(Prep)) + " " + (getItem(Location))
                          );
       
       
@@ -96,7 +100,7 @@
     </tr>
     <tr>
         <td><div class="FILLER" style="width: 100px;height:100px"></div></td>
-        <td><div class="title" style="font-family: Tahoma;font-size:12pt;left:200px;width: 500px;"><h1>Tribe Name Generator as of 12:40  07/07/2020 </h1><br />
+        <td><div class="title" style="font-family: Tahoma;font-size:12pt;left:200px;width: 500px;"><h1>Tribe Name Generator as of 14:40  07/07/2020 </h1><br />
 An incredibly jank Tribe Cat Generator. Huge Work in Progress.</div>
     <br /> <br /> 
     <button onclick="getCat()">New Cat!</button> <br /> <br /> <br />
